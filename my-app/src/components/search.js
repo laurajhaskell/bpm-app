@@ -8,23 +8,25 @@ class Search extends Component {
             term: ''
         }
 
-        this.onInputChange = term => {
-            this.setState({term});
-            this.props.onSearchTermChange(term);
-        }
+    }//end constructor
+
+    onInputChange(term) {
+        this.setState({term});
+        this.props.onSearchTermChange(term);
     }
 
     render() {
         return(
-            <div>
+            <div id="spotify-request">
                 <section className="container">
                     <div className="column">
-                        <p>Find songs that match your BPM.</p>
+                        <p class="font-weight-bold">Search for a song to see it's BPM.</p>
                     </div>
                 </section>
 
                 <section className="box">
                     <div className="field is-grouped">
+                        <p>
                         <input
                             className="input" 
                             type="text"
@@ -32,6 +34,7 @@ class Search extends Component {
                             value={this.state.term}
                             onChange = {e => this.onInputChange(e.target.value)}
                         />
+                        </p>
                         <section className="control">
                         <button type="submit" className="btn btn-primary">Search</button>
                             {/* <a className="button is-dark">
@@ -41,8 +44,8 @@ class Search extends Component {
                     </div>
                 </section>
             </div>
-        );
-    }
-}
+        );//end return
+    }//end render
+}//end component
 
 export default Search;

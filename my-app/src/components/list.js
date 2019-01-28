@@ -7,7 +7,7 @@ class List extends Component {
     }
 
     render() {
-        let const = -1;
+        let cont = -1;
         const trackItems = this.props.tracks.map((track, index) => {
             cont++;
 
