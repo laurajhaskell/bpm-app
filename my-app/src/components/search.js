@@ -30,7 +30,7 @@ class Search extends Component {
                         <input
                             className="input" 
                             type="text"
-                            placeholder="Song name"
+                            placeholder="e.g. "
                             value={this.state.term}
                             onChange = {e => this.onInputChange(e.target.value)}
                         />
